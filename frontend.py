@@ -7,26 +7,26 @@ st.title("predict the Loan Amount")
 st.markdown("Enter your details below:")
 
 # Input fields
-Gender = st.text_input("gender",value="Male or Female")
-Married = st.text_input("Married",value="Yes or No")
-Education = st.text_input("education",value="Graduate or Not Graduate")
-Self_Employed = st.text_input("Employed",value="Yes or NO")
-ApplicantIncome = st.number_input("Annual Income (KPA)", value=100)
-Credit_History = st.number_input("score", value=0.68)
-Property_Area = st.selectbox(
+gender = st.text_input("gender",value="Male or Female")
+married = st.text_input("Married",value="Yes or No")
+education = st.text_input("education",value="Graduate or Not Graduate")
+self_employed = st.text_input("Employed",value="Yes or NO")
+income = st.number_input("Annual Income (KPA)", value=100)
+credit_score = st.number_input("score", value=0.68)
+property_area = st.selectbox(
     "Area",
     ['Urban', 'Semiurban', 'Rural']
 )
 
 if st.button("Predict loan Amount"):
     input_data = {
-        "Gender": Gender,
-        "Married": Married,
-        "Education": Education,
-        "Self Employed": Self_Employed,
-        "Income": ApplicantIncome,
-        "Credit Score": Credit_History,
-        "Property Area": Property_Area
+        "gender": gender,
+        "married": married,
+        "education": education,
+        "self_employed": self_employed,
+        "income": income,
+        "credit_his": credit_score,
+        "pro_area": property_area
     }
 
     try:
